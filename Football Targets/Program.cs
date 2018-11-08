@@ -33,7 +33,18 @@ namespace Football_Targets
 
             Console.WriteLine
                 ("                         2018 Football Catching Stats!" + Environment.NewLine +
-                "                           Type S for stats, 3 for the Top 3 Targeted Players, E to exit" + Environment.NewLine +
+                "                           Type S for stats" + Environment.NewLine +
+                "                               Type Week 1 for Week 1 targets" + Environment.NewLine +
+                "                               Type Week 2 for Week 2 targets" + Environment.NewLine +
+                "                               Type Week 3 for Week 3 targets" + Environment.NewLine +
+                "                               Type Week 4 for Week 4 targets" + Environment.NewLine +
+                "                               Type Week 5 for Week 5 targets" + Environment.NewLine +
+                "                               Type Week 6 for Week 6 targets" + Environment.NewLine +
+                "                           Type 3 for the Top 3 Target Players" + Environment.NewLine +
+                "                           Type ADD to add new weekly stats" + Environment.NewLine +
+                "                            Type E to exit" + Environment.NewLine +
+
+
                 "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
                 "-------------------------------------------------------------------------------------------------------");
             string UserInput = Console.ReadLine().ToUpper();
@@ -41,12 +52,104 @@ namespace Football_Targets
             {
                 UserInput = "S";
                 Console.WriteLine("STATS");
+                Console.WriteLine("Here are the receiving stats of the 2018 Oakland Raiders players from weeks 1 - 6");
+                Console.ReadLine();
+
+                /*          When displaying stats, show each player in order of total targets for the season
+                 *          players.Sort();
+                foreach (Player player in players)
+                {
+                    Console.WriteLine($"{player.name} had {player.totalTgts} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+
+
+                }
+                */
+
+                UserInput = "WEEK 1";
+                players.Sort();
+                    foreach(Player player in players)
+                {
+                    Console.WriteLine($"In week 1, {player.name} had {player.wk1} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+                };
+                Console.ReadLine();
+
+                UserInput = "WEEK 2";
+                players.Sort();
+                    foreach (Player player in players)
+                {
+                    Console.WriteLine($"In week 2, {player.name} had {player.wk2} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+                };
+                Console.ReadLine();
+
+
+                UserInput = "WEEK 3";
+                players.Sort();
+                    foreach (Player player in players)
+                {
+                    Console.WriteLine($"In week 3, {player.name} had {player.wk3} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+                };
+                Console.ReadLine();
+
+
+                UserInput = "WEEK 4";
+                players.Sort();
+                    foreach (Player player in players)
+                {
+                    Console.WriteLine($"In week 4, {player.name} had {player.wk4} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+                };
+                Console.ReadLine();
+
+
+                UserInput = "WEEK 5";
+                players.Sort();
+                    foreach (Player player in players)
+                {
+                    Console.WriteLine($"In week 5, {player.name} had {player.wk5} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+                };
+                Console.ReadLine();
+
+
+                UserInput = "WEEK 6";
+                players.Sort();
+                    foreach (Player player in players)
+                {
+                    Console.WriteLine($"In week 6, {player.name} had {player.wk6} targets");
+
+                    NewStats newStats = new NewStats();
+                    newStats.AddStats(players);
+                };
+                Console.ReadLine();
+
 
                 UserInput = "3";
                 //Show top 3 targeted players
                 var topThreeTargets = GetTopThreeTargets(players);
+                Console.ReadLine();
+
+                UserInput = "ADD";
+                Console.ReadLine();
+                //add data for new updated weekly stats 
 
                 UserInput = "E";
+                //exit
                 Console.WriteLine("Goodbye!");
                 Environment.Exit(0);
 
@@ -57,8 +160,8 @@ namespace Football_Targets
                 Console.WriteLine("Error message: Your input is not valid, please type S for stats, E to exit");
             }
 
-            Console.WriteLine("Here are the receiving stats of the 2018 Oakland Raiders players from weeks 1 - 6");
-            Console.ReadLine();
+           // Console.WriteLine("Here are the receiving stats of the 2018 Oakland Raiders players from weeks 1 - 6");
+           // Console.ReadLine();
 
 
 
@@ -80,85 +183,19 @@ namespace Football_Targets
             }
         }
 
-        
-
         //Player stats and information weeks 1-6 of data
 
         public static List<Player> ReadPlayerStats(string fileName)
         {
-            var playerStats = new List<Player>();
             using (var reader = new StreamReader(fileName))
             {
-                string line = "";
-                reader.ReadLine();
-                while((line = reader.ReadLine()) != null)
-                {
-                    var playerStat = new Player();
-                    string[] values = line.Split(',');
+                var allData = JsonConvert.DeserializeObject<List<Player>>(reader.ReadToEnd());
 
-                    playerStat.name = values[0];
+                return allData;
+            };
 
-                    Position Position;
-                    if (Enum.TryParse(values[1], out Position))
-                    {
-                        playerStat.Position = Position;
-                    }
-                    int parseInt;
-                    if (int.TryParse(values[2], out parseInt))
-                    {
-                        playerStat.wk1 = parseInt;
-                    }
-                    if (int.TryParse(values[3], out parseInt))
-                    {
-                        playerStat.wk2 = parseInt;
-                    }
-                    if (int.TryParse(values[4], out parseInt))
-                    {
-                        playerStat.wk3 = parseInt;
-                    }
-                    if (int.TryParse(values[5], out parseInt))
-                    {
-                        playerStat.wk4 = parseInt;
-                    }
-                    if (int.TryParse(values[6], out parseInt))
-                    {
-                        playerStat.wk5 = parseInt;
-                    }
-                    if (int.TryParse(values[7], out parseInt))
-                    {
-                        playerStat.wk6 = parseInt;
-                    }
-                    if (int.TryParse(values[8], out parseInt))
-                    {
-                        playerStat.totalTgts = parseInt;
-                    }
-                    if (int.TryParse(values[9], out parseInt))
-                    {
-                        playerStat.ctch = parseInt;
-                    }
-                    if (int.TryParse(values[10], out parseInt))
-                    {
-                        playerStat.touchDown = parseInt;
-                    }
-
-                    double averageTargets;
-                    if (double.TryParse(values[11], out averageTargets))
-                    {
-                        playerStat.avgTgts = averageTargets;
-                    }
-
-                    double catchPercent;
-                    if (double.TryParse(values[12], out catchPercent))
-                    {
-                        playerStat.catchPrcnt = catchPercent;
-                    }
-
-                    playerStats.Add(playerStat);
-                }
-
-            }
-            return playerStats;
         }
+    
             
 
 
