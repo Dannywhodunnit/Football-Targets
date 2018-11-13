@@ -31,6 +31,25 @@ namespace Football_Targets
         public int wk5 { get; set; }
         [JsonProperty(PropertyName = "WK6")]
         public int wk6 { get; set; }
+        /*
+        [JsonProperty(PropertyName = "WK8")]
+        public int wk8 { get; set; }
+        [JsonProperty(PropertyName = "WK9")]
+        public int wk9 { get; set; }
+        [JsonProperty(PropertyName = "WK10")]
+        public int wk10 { get; set; }
+        [JsonProperty(PropertyName = "WK11")]
+        public int wk11 { get; set; }
+        [JsonProperty(PropertyName = "WK12")]
+        public int wk12 { get; set; }
+        [JsonProperty(PropertyName = "WK13")]
+        public int wk13 { get; set; }
+        [JsonProperty(PropertyName = "WK14")]
+        public int wk14 { get; set; }
+        [JsonProperty(PropertyName = "WK15")]
+        public int wk15 { get; set; }
+        [JsonProperty(PropertyName = "WK16")]
+        public int wk16 { get; set; } */
         [JsonProperty(PropertyName = "TOTAL\nTGTS")]
         public int totalTgts { get; set; }
         [JsonProperty (PropertyName = "AVG\nTGTS")]
