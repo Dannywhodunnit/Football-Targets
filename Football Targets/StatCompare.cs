@@ -10,7 +10,7 @@ namespace Football_Targets
     {
         public int Compare(Player x, Player y)
         {
-            return x.wk1.CompareTo(y.wk1) * -1;
+            return x.totalTgts.CompareTo(y.totalTgts) * -1;
         }
     }
 }

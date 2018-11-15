@@ -31,7 +31,6 @@ namespace Football_Targets
         public int wk5 { get; set; }
         [JsonProperty(PropertyName = "WK6")]
         public int wk6 { get; set; }
-        /*
         [JsonProperty(PropertyName = "WK8")]
         public int wk8 { get; set; }
         [JsonProperty(PropertyName = "WK9")]
@@ -49,7 +48,7 @@ namespace Football_Targets
         [JsonProperty(PropertyName = "WK15")]
         public int wk15 { get; set; }
         [JsonProperty(PropertyName = "WK16")]
-        public int wk16 { get; set; } */
+        public int wk16 { get; set; }
         [JsonProperty(PropertyName = "TOTAL\nTGTS")]
         public int totalTgts { get; set; }
         [JsonProperty (PropertyName = "AVG\nTGTS")]
@@ -61,7 +60,7 @@ namespace Football_Targets
         [JsonProperty(PropertyName = "TD")]
         public int touchDown { get; set; }
 
-
+        //show all players in order of most targets
         public int CompareTo(Player that)
         {
             int result = this.name.CompareTo(that.name);

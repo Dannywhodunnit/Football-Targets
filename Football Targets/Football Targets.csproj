@@ -48,8 +48,6 @@
   <ItemGroup>
     <Compile Include="NewStats.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerStat.cs" />
-    <Compile Include="PlayerStats.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatCompare.cs" />
@@ -60,11 +58,7 @@
     <None Include="raidersFootballData.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
