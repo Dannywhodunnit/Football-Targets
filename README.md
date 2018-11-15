@@ -1,7 +1,8 @@
 # Football-Targets
 2018 player stats
 
---This is the C# Objects project of Daniel Thompson from the Wednesday evening class--
+This is the C# Objects project of Daniel Thompson from the Wednesday evening class
+
 In brief: This console app allows the user to view and add stats to the players of
 the 2018 Oakland Raiders players. Specifically targets for the receiving players, 
 up to week six, allowing the user to add later statistics to the file.
