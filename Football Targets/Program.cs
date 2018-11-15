@@ -8,56 +8,15 @@ namespace Football_Targets
 {
     class Program
     {
-        public static int MainMenu()
-        {
-            Console.WriteLine
-                        ("                         2018 Football Catching Stats!" + Environment.NewLine +
-                    "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + Environment.NewLine +
-                    "                               Type 1 for Week 1 targets" + Environment.NewLine +
-                    "                               Type 2 for Week 2 targets" + Environment.NewLine +
-                    "                               Type 3 for Week 3 targets" + Environment.NewLine +
-                    "                               Type 4 for Week 4 targets" + Environment.NewLine +
-                    "                               Type 5 for Week 5 targets" + Environment.NewLine +
-                    "                               Type 6 for Week 6 targets" + Environment.NewLine +
-                    "                               Type 17 for the Top 3 Target Players" + Environment.NewLine +
-                    "                               Type 18 for Total Targets" + Environment.NewLine +
-                    "                               Type 19 to add new weekly stats" + Environment.NewLine +
-                    "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
-                    "                               Type 99 to exit" + Environment.NewLine +
-                    "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
-                    "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
-                    "-------------------------------------------------------------------------------------------------------");
-            return int.Parse(Console.ReadLine());
-
-
-        }
-
-        public static int AddMenu()
-        {
-            Console.WriteLine("------------------------choose a week------------------------" + Environment.NewLine +
-                                "--------8--------" + Environment.NewLine +
-                                "--------9--------" + Environment.NewLine +
-                                "--------10--------" + Environment.NewLine +
-                                "--------11--------" + Environment.NewLine +
-                                "--------12--------" + Environment.NewLine +
-                                "--------13--------" + Environment.NewLine +
-                                "--------14--------" + Environment.NewLine +
-                                "--------15--------" + Environment.NewLine +
-                                "--------16--------");
-            return int.Parse(Console.ReadLine());
-        }
+       
 
         static void Main(string[] args)
         {
+
+            
             string currentDirectory = Directory.GetCurrentDirectory();
-            //DirectoryInfo directory = new DirectoryInfo(currentDirectory);
             var fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
             var players = ReadPlayerStats(fileName);
-            //fileName = Path.Combine(directory.FullName, "raidersFootballData.json");
-            //var players = DeserializePlayers(fileName);
-
-
-
 
 
             while (true)
@@ -185,12 +144,11 @@ namespace Football_Targets
                                         var wk8 = Console.ReadLine();
 
                                         player.wk8 = int.Parse(wk8);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
-
-                                        //players.Add(wk8);
-
+                                      
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -201,11 +159,12 @@ namespace Football_Targets
                                         var wk9 = Console.ReadLine();
 
                                         player.wk9 = int.Parse(wk9);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
 
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
-                                        break;
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
+                                    break;
 
 
                                 case 10:
@@ -215,10 +174,11 @@ namespace Football_Targets
                                         var wk10 = Console.ReadLine();
 
                                         player.wk10 = int.Parse(wk10);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
 
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -230,10 +190,11 @@ namespace Football_Targets
                                         var wk11 = Console.ReadLine();
 
                                         player.wk11 = int.Parse(wk11);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
 
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -245,10 +206,11 @@ namespace Football_Targets
                                         var wk12 = Console.ReadLine();
 
                                         player.wk12 = int.Parse(wk12);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
-
+                                        
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -260,10 +222,11 @@ namespace Football_Targets
                                         var wk13 = Console.ReadLine();
 
                                         player.wk13 = int.Parse(wk13);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
-
+                                        
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -276,10 +239,11 @@ namespace Football_Targets
                                         var wk14 = Console.ReadLine();
 
                                         player.wk14 = int.Parse(wk14);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
-
+                                       
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -292,10 +256,11 @@ namespace Football_Targets
                                         var wk15 = Console.ReadLine();
 
                                         player.wk15 = int.Parse(wk15);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
-
+                                        
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -308,10 +273,11 @@ namespace Football_Targets
                                         var wk16 = Console.ReadLine();
 
                                         player.wk16 = int.Parse(wk16);
-                                        fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
-
+                                        
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
+                                    fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    SerializePlayers(players, fileName);
                                     break;
 
 
@@ -363,14 +329,10 @@ namespace Football_Targets
             };
 
         }
-        //
-        //
-//
-//
-//
-//
-//
-        public static List<Player> SerializePlayers (List<Player> players, string fileName)
+     
+
+//          Serialize new data
+        public static void SerializePlayers (List<Player> players, string fileName)
         {
             var serializer = new JsonSerializer();
             using (var writer = new StreamWriter(fileName))
@@ -378,8 +340,51 @@ namespace Football_Targets
             {
                 serializer.Serialize(jsonWriter, players);
             }
-            
-           
+        
+
+        }
+
+
+
+       //Main Menu Options
+        public static int MainMenu()
+        {
+            Console.WriteLine
+                        ("                         2018 Football Catching Stats!" + Environment.NewLine +
+                    "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + Environment.NewLine +
+                    "                               Type 1 for Week 1 targets" + Environment.NewLine +
+                    "                               Type 2 for Week 2 targets" + Environment.NewLine +
+                    "                               Type 3 for Week 3 targets" + Environment.NewLine +
+                    "                               Type 4 for Week 4 targets" + Environment.NewLine +
+                    "                               Type 5 for Week 5 targets" + Environment.NewLine +
+                    "                               Type 6 for Week 6 targets" + Environment.NewLine +
+                    "                               Type 17 for the Top 3 Target Players" + Environment.NewLine +
+                    "                               Type 18 for Total Targets" + Environment.NewLine +
+                    "                               Type 19 to add new weekly stats" + Environment.NewLine +
+                    "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
+                    "                               Type 99 to exit" + Environment.NewLine +
+                    "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
+                    "-------------------------------------------------------------------------------------------------------" + Environment.NewLine +
+                    "-------------------------------------------------------------------------------------------------------");
+            return int.Parse(Console.ReadLine());
+
+
+        }
+
+        //Add Stats Menu
+        public static int AddMenu()
+        {
+            Console.WriteLine("------------------------choose a week------------------------" + Environment.NewLine +
+                                "--------8--------" + Environment.NewLine +
+                                "--------9--------" + Environment.NewLine +
+                                "--------10--------" + Environment.NewLine +
+                                "--------11--------" + Environment.NewLine +
+                                "--------12--------" + Environment.NewLine +
+                                "--------13--------" + Environment.NewLine +
+                                "--------14--------" + Environment.NewLine +
+                                "--------15--------" + Environment.NewLine +
+                                "--------16--------");
+            return int.Parse(Console.ReadLine());
         }
 
         //Deserialize data
@@ -412,7 +417,7 @@ namespace Football_Targets
             return topThreeTargets;
         }
 
-        //Serialize data
+        //Serialize top three players
         public static void SerializeTopThreeToFile(List<Player> players, string fileName)
         {
             var serializer = new JsonSerializer();
