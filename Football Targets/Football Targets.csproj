@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NewStats.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,11 +57,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\Football Targets.exe.config" />
+    <None Include="bin\Debug\raidersFootballData.json" />
+    <None Include="bin\Debug\topthree.json" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Football Targets.csproj.CopyComplete" />
+    <None Include="obj\Debug\Football Targets.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Football Targets.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\Football Targets.csproj.CoreCompileInputs.cache" />
     <None Include="packages.config" />
     <None Include="raidersFootballData.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Football Targets.exe" />
+    <Content Include="bin\Debug\Football Targets.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="obj\Debug\Football Targets.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Football Targets.exe" />
+    <Content Include="obj\Debug\Football Targets.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

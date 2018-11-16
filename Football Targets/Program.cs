@@ -8,12 +8,12 @@ namespace Football_Targets
 {
     class Program
     {
-       
+
 
         static void Main(string[] args)
         {
 
-            
+
             string currentDirectory = Directory.GetCurrentDirectory();
             var fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
             var players = ReadPlayerStats(fileName);
@@ -99,6 +99,172 @@ namespace Football_Targets
                         Console.ReadLine();
                         break;
 
+                    /*Option to view user input to be added later
+                     * 
+                     * case 8:
+                        wk8 != null;
+                            players.Sort();
+                            foreach (Player player in players)
+                            {
+                                Console.WriteLine($"In week 8, {player.Position} {player.name} had {player.wk8} targets");
+
+                                NewStats newStats = new NewStats();
+                                newStats.AddStats(players);
+                            }
+                        if (player.wk8 = null)
+                            { 
+                                Console.WriteLine("There is no data available please add for this week or try another option");
+                            }
+                        
+                            Console.ReadLine();
+                            break;
+
+
+                    case 9:
+                        if (wk9 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 9, {player.Position} {player.name} had {player.wk9} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+                    case 10:
+                        if (wk10 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 10, {player.Position} {player.name} had {player.wk10} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+                    case 11:
+                        if (wk11 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 11, {player.Position} {player.name} had {player.wk11} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+                    case 12:
+                        if (wk12 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 12, {player.Position} {player.name} had {player.wk12} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+                    case 13:
+                        if (wk13 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 13, {player.Position} {player.name} had {player.wk13} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+
+                    case 14:
+                        if (wk14 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 14, {player.Position} {player.name} had {player.wk14} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+
+                    case 15:
+                        if (wk15 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 15, {player.Position} {player.name} had {player.wk15} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;
+
+
+                    case 16:
+                        if (wk16 != null)
+                            players.Sort();
+                        foreach (Player player in players)
+                        {
+                            Console.WriteLine($"In week 16, {player.Position} {player.name} had {player.wk16} targets");
+
+                            NewStats newStats = new NewStats();
+                            newStats.AddStats(players);
+                        }
+                        else
+                       {
+                            Console.WriteLine("There is no data available please add for this week or try another option");
+                        }
+                        Console.ReadLine();
+                        break;*/
+
 
                     case 17:
                         //Show top 3 targeted players
@@ -144,10 +310,12 @@ namespace Football_Targets
                                         var wk8 = Console.ReadLine();
 
                                         player.wk8 = int.Parse(wk8);
-                                      
+
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
                                     fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
+                                    //fileName = Path.Combine(currentDirectory, @"C:\Football-Targets-master\Football Targets\raidersFootballData.json");
+
                                     SerializePlayers(players, fileName);
                                     break;
 
@@ -206,7 +374,7 @@ namespace Football_Targets
                                         var wk12 = Console.ReadLine();
 
                                         player.wk12 = int.Parse(wk12);
-                                        
+
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
                                     fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
@@ -222,7 +390,7 @@ namespace Football_Targets
                                         var wk13 = Console.ReadLine();
 
                                         player.wk13 = int.Parse(wk13);
-                                        
+
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
                                     fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
@@ -239,7 +407,7 @@ namespace Football_Targets
                                         var wk14 = Console.ReadLine();
 
                                         player.wk14 = int.Parse(wk14);
-                                       
+
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
                                     fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
@@ -256,7 +424,7 @@ namespace Football_Targets
                                         var wk15 = Console.ReadLine();
 
                                         player.wk15 = int.Parse(wk15);
-                                        
+
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
                                     fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
@@ -273,7 +441,7 @@ namespace Football_Targets
                                         var wk16 = Console.ReadLine();
 
                                         player.wk16 = int.Parse(wk16);
-                                        
+
                                         Console.WriteLine($"{player.name}'s targets were added!");
                                     }
                                     fileName = Path.Combine(currentDirectory, "raidersFootballData.json");
@@ -329,10 +497,10 @@ namespace Football_Targets
             };
 
         }
-     
 
-//          Serialize new data
-        public static void SerializePlayers (List<Player> players, string fileName)
+
+        //          Serialize new data
+        public static void SerializePlayers(List<Player> players, string fileName)
         {
             var serializer = new JsonSerializer();
             using (var writer = new StreamWriter(fileName))
@@ -340,13 +508,13 @@ namespace Football_Targets
             {
                 serializer.Serialize(jsonWriter, players);
             }
-        
+
 
         }
 
 
 
-       //Main Menu Options
+        //Main Menu Options
         public static int MainMenu()
         {
             Console.WriteLine
@@ -357,7 +525,20 @@ namespace Football_Targets
                     "                               Type 3 for Week 3 targets" + Environment.NewLine +
                     "                               Type 4 for Week 4 targets" + Environment.NewLine +
                     "                               Type 5 for Week 5 targets" + Environment.NewLine +
-                    "                               Type 6 for Week 6 targets" + Environment.NewLine +
+                    "                               Type 6 for Week 6 targets" + Environment.NewLine +/*
+                    "                              ---------------------------" + Environment.NewLine +
+                    "                               If you added data for additional weeks:" + Environment.NewLine +
+                    "                               ---------------------------" + Environment.NewLine +
+                    "                               Type 8 for Week 8 targets" + Environment.NewLine +
+                    "                               Type 9 for Week 9 targets" + Environment.NewLine +
+                    "                               Type 10 for Week 10 targets" + Environment.NewLine +
+                    "                               Type 11 for Week 11 targets" + Environment.NewLine +
+                    "                               Type 12 for Week 12 targets" + Environment.NewLine +
+                    "                               Type 13 for Week 13 targets" + Environment.NewLine +
+                    "                               Type 14 for Week 14 targets" + Environment.NewLine +
+                    "                               Type 15 for Week 15 targets" + Environment.NewLine +
+                    "                               Type 16 for Week 16 targets" + Environment.NewLine +
+                    "                              ---------------------------" + Environment.NewLine +*/
                     "                               Type 17 for the Top 3 Target Players" + Environment.NewLine +
                     "                               Type 18 for Total Targets" + Environment.NewLine +
                     "                               Type 19 to add new weekly stats" + Environment.NewLine +
@@ -427,6 +608,6 @@ namespace Football_Targets
                 serializer.Serialize(jsonWriter, players);
             }
         }
-        
+
     }
 }
